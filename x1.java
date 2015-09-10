@@ -1,3 +1,4 @@
+
 //////// What am I trying to do???
 //////// What is my name?  (CST 112; today's date?)
 
@@ -8,16 +9,17 @@ float horizon;
 
 //// SETUP:  window size, initialization (start in middle of screen).
 void setup() {
-  size( 640,480);
-  horizon=  height/4;
-  x=  width/2;
-  y=  height/2;
+  size( 500,480);
+  horizon=  height/5;
+  x=  width/3;
+  y=  height/4;
   dx=  3;
   dy=  2;
 }
 
 //// NEXT FRAME:  scene, action, show.
 void draw() {
+  
   //// SCENE:  sky, sun, tree, house, etc.
   background( 100,150,200 );                // sky
   fill( 255,255,0 );
@@ -27,10 +29,10 @@ void draw() {
   rect( 0,horizon, width,height*3/4 );      // grass.
   
   /* INSERT YOUR CODE HERE! */
-  triangle( 150,horizon, 120,horizon-50, 180,horizon-50  );  // tree
+  triangle(200,horizon, 50,horizon-50, 80,horizon-40  );  // tree
   text( "This is NOT a good tree; please fix it!", 150,horizon );
                                             // house
-
+                                            /// ellipse(x,y, 20,30);
   fill(0);
   text( "My name is sk", 10,height-20 );                                          
                                             
@@ -42,7 +44,8 @@ void draw() {
 
   /* INSERT YOUR CODE HERE! */
   fill(255,0,0); rect( x,y, 30,50 );        /* REPLACE THIS WITH YOUR OWN CODE! */
-  text( "Fred", x,y );
+  text( "TOM ", x,y );
+  ellipse( x,y, 20,20);
 
 }
 
